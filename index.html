@@ -1,0 +1,35 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandpa's Tech Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1> 爷爷的电脑小妙招 </h1>
+        <p>请在下面的按钮里面选一个，查看简单又实用的电脑小妙招。</p>
+    </header>
+
+    <main>
+        <section class="button-grid">
+            <button class="guide-btn" onclick="showGuide('wifi')"> Wi-Fi </button>
+            <button class="guide-btn" onclick="showGuide('photo')"> 照片 </button>
+            <button class="guide-btn" onclick="showGuide('zoom')"> 放大 </button>
+            <button class="guide-btn" onclick="showGuide('volume')"> 声音 </button>
+        </section>
+
+        <section id="guide-display" class="guide-card hidden">
+            <h2 id="guide-title">Guide Title</h2>
+            <ol id="guide-steps">
+                <!-- Steps will load here dynamically -->
+            </ol>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
