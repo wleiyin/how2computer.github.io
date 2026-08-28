@@ -7,7 +7,7 @@ const guides = {
             "用鼠标点击。",
             "在表里找出我们家的 Wi-Fi 名称，点击它。CCM开头的",
             "点击连接。",
-            "输入 Wi- Fi 密码，然后按回车键 （return）。"
+            "输入 Wi-Fi 密码，然后按回车键 （return）。"
         ]
     },
     photo: {
@@ -18,7 +18,7 @@ const guides = {
             "Use the keyboard and search Photo Booth",
             "Click the red circle button on the bottom of the screen.",
             "Once you take a photo, click the upload button on the bottom right corner.",
-            "Press upload to photos. You have finished 照片教程。“
+            "Press upload to photos. You have finished 照片教程。"
         ]
     },
     zoom: {
@@ -48,20 +48,17 @@ function showGuide(guideKey) {
     const selectedGuide = guides[guideKey];
 
     if (selectedGuide) {
- 
         titleElem.textContent = selectedGuide.title;
 
-   
         stepsElem.innerHTML = '';
 
-   
         selectedGuide.steps.forEach(stepText => {
             const li = document.createElement('li');
             li.textContent = stepText;
             stepsElem.appendChild(li);
         });
 
-   
+        
         displayCard.classList.remove('hidden');
     }
 }
